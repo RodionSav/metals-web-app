@@ -1,0 +1,17 @@
+.contacts {
+  padding-bottom: 88px;
+
+  &__header {
+    height: 60vh;
+    background-image: url('../../../public/images/contacts-img.png');
+
+    &-container {
+      margin: auto;
+      max-width: 1490px;
+    }
+  }
+
+  &__title {
+    padding-top: 438px;
+  }
+}

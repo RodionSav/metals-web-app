@@ -1,0 +1,139 @@
+@import "../../styles/utils/typography";
+@import "../../styles/utils/mixins";
+@import "../../styles/utils/variables";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  box-sizing: border-box;
+  max-width: 1495px;
+  padding: 38px 0;
+
+  @include onPhone {
+    padding: 12px 15px;
+    height: 66px;
+  }
+
+  @include onDesktop {
+    height: 150px;
+  }
+
+  &-logo {
+    @include onPhone {
+      width: 42px;
+    }
+
+    @include onDesktop {
+      width: 75px;
+    }
+
+    &-text {
+      width: 70px;
+
+      @include onPhone {
+        width: 34px;
+      }
+    }
+
+    &-container {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    &__title {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 64px;
+    }
+  }
+
+  &-about {
+    &__item {
+      display: flex;
+      align-items: center;
+      gap: 21px;
+      margin-bottom: 15px;
+
+      &-container {
+        @include onPhone {
+          display: none;
+        }
+
+        &-phone {
+          position: relative;
+          z-index: 5;
+          display: block;
+          margin: auto;
+        }
+      }
+
+      &__title {
+        font-weight: 600;
+        font-size: 14px;
+        color: #02263e;
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    gap: 45px;
+
+    @include onPhone {
+      display: none;
+    }
+
+    &-phone {
+      @include onDesktop {
+        display: none;
+      }
+    }
+
+    &__title {
+      text-decoration: none;
+      color: #02263e;
+    }
+
+    &__button {
+      outline: none;
+      background: none;
+      border: none;
+    }
+  }
+}
+
+.nav {
+  &__menu {
+    background-color: $white-color;
+    height: 844px;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    &-container {
+      display: flex;
+      justify-content: space-between;
+      padding: 24px 28px;
+    }
+  }
+
+  &__item {
+    &-container {
+      display: flex;
+      flex-direction: column;
+      gap: 45px;
+    }
+  }
+
+  &-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+  }
+}

@@ -1,0 +1,179 @@
+@import "../../styles/utils/mixins";
+@import '../../styles/utils/variables';
+
+.main {
+  height: 1006px;
+  background-image: url("../../../public/images/main-img.png");
+
+  @include onPhone {
+    height: 844px;
+    background-position: 60%;
+  }
+
+  &-container {
+    position: relative;
+    margin: auto;
+    max-width: 1490px;
+
+    @include onPhone {
+      margin: 0 15px;
+    }
+  }
+
+  &__title {
+    color: $white-color;
+    font-size: 62px;
+    font-weight: 900;
+    list-style: 80px;
+    text-align: start;
+    margin-top: 239px;
+
+    @include onPhone {
+      margin-top: 311px;
+    }
+
+    &-container {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 31px;
+    margin-top: 30px;
+    color: $white-color;
+    text-align: start;
+
+    @include onPhone {
+      font-size: 14px;
+      line-height: 18.2px;
+      margin-top: 50px;
+    }
+  }
+
+  &__button {
+    width: 444px;
+    margin-top: 53px;
+
+    @include onPhone {
+      width: 100%;
+    }
+  }
+
+  &-pluses {
+    &__main-container {
+      // width: 100%;
+      width: 1490px;
+      background-color: #99c7f24d;
+      padding: 50px 0;
+      border-radius: 20px;
+      margin-top: 78px;
+
+      @include onPhone {
+        display: none;
+      }
+
+      &-phone {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 30px;
+        margin: auto;
+        background-color: #99c7f24d;
+        height: 199px;
+        width: 100%;
+        border-radius: 20px;
+        margin-bottom: 80px;
+
+        @include onDesktop {
+          display: none;
+        }
+      }
+    }
+
+    &-container {
+      display: flex;
+      max-width: 1000px;
+      margin: auto;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__title {
+      color: $white-color;
+
+      &-phone {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 24.55px;
+
+        &-first {
+          &::after {
+            content: "";
+            position: relative;
+            display: block;
+            top: 15px;
+            left: 28px;
+            width: 90px;
+            height: 1px;
+            background-color: #292929;
+          }
+        }
+
+        &-second {
+          &::after {
+            content: "";
+            position: relative;
+            display: block;
+            top: 15px;
+            left: 94px;
+            width: 90px;
+            height: 1px;
+            background-color: #292929;
+          }
+        }
+      }
+    }
+  }
+
+  &-phone {
+    &__link {
+      // position: absolute;
+
+      @include onPhone {
+        width: 62px;
+        margin-top: 30px;
+        position: absolute;
+        right: 0;
+      }
+
+      &-mobile {
+        @include onDesktop {
+          display: none;
+        }
+      }
+
+      &-desktop {
+        @include onPhone {
+          display: none;
+        }
+      }
+
+      // @include onDesktop {
+      //   right: -172px;
+      //   bottom: 0;
+      // }
+    }
+
+    &-container {
+      display: flex;
+      align-items: end;
+      gap: 40px;
+    }
+  }
+}

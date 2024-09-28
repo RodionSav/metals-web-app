@@ -1,0 +1,60 @@
+@import "../../styles/utils/mixins";
+
+.price {
+  &__header {
+    height: 65vh;
+    background-image: url("../../../public/images/about-img.png");
+
+    @include onPhone {
+      height: 200px;
+      background-size: cover;
+    }
+  }
+
+  &-container {
+    margin: auto;
+    max-width: 1490px;
+
+    @include onPhone {
+      margin: 0 15px;
+    }
+  }
+
+  &__title {
+    padding-top: 500px;
+
+    @include onPhone {
+      padding-top: 140px;
+    }
+  }
+
+  &__button {
+    margin: auto;
+    margin-top: 55px;
+    margin-bottom: 91px;
+    display: flex;
+    justify-content: center;
+    width: 287px;
+    height: 57px;
+
+    @include onPhone {
+      margin-bottom: 52px;
+    }
+  }
+
+  &__section {
+    padding-bottom: 150px;
+
+    &__title {
+      font-size: 52px;
+      font-weight: 600;
+      line-height: 70.93px;
+      margin-top: 100px;
+      margin-bottom: 87px;
+
+      @include onPhone {
+        display: none;
+      }
+    }
+  }
+}

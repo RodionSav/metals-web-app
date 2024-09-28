@@ -1,0 +1,35 @@
+@import '../../styles/utils/mixins';
+
+.about {
+  &__section {
+    height: 65vh;
+    background-image: url("../../../public/images/about-img.png");
+
+    @include onPhone {
+      height: 196px;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+
+  &__title {
+    &-second {
+      padding-top: 500px;
+
+      @include onPhone {
+        padding-top: 140px;
+      }
+    }
+  }
+
+  &__article {
+    text-align: start;
+    padding-top: 100px;
+    padding-bottom: 150px;
+
+    @include onPhone {
+      padding-top: 30px;
+      padding-bottom: 45px;
+    }
+  }
+}

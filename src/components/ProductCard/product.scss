@@ -1,0 +1,21 @@
+.product {
+  &__card {
+    border-radius: 10px;
+    height: 345px;
+    width: 365px;
+    box-shadow: 4px 4px 11.4px 0px #0a3d7840;
+  }
+
+  &__title {
+    padding: 15px;
+    padding-left: 20px;
+    text-align: start;
+  }
+
+  &-img {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 272px;
+  }
+}

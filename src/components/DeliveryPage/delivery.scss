@@ -1,0 +1,50 @@
+@import "../../styles/utils/mixins";
+
+.delivery {
+  &__section {
+    height: 50vh;
+    background-image: url("../../../public/images/delivery-img.png");
+
+    @include onPhone {
+      height: 200px;
+      background-size: cover;
+    }
+
+    &__title {
+      padding-top: 367px;
+
+      @include onPhone {
+        padding-top: 140px;
+      }
+    }
+  }
+
+  &-container {
+    margin: auto;
+    max-width: 1490px;
+
+    @include onPhone {
+      margin: 0 15px;
+    }
+  }
+
+  &__article {
+    text-align: start;
+    padding-top: 100px;
+    padding-bottom: 282px;
+
+    @include onPhone {
+      padding-top: 30px;
+      padding-bottom: 45px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 34px;
+    letter-spacing: 0.013em;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+}
