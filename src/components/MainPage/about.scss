@@ -180,6 +180,10 @@
       display: none;
     }
 
+    @include onTablet {
+      overflow: scroll;
+    }
+
     &-phone {
       margin-top: 30px;
 
@@ -231,6 +235,11 @@
       width: 100%;
     }
 
+    @include onTablet {
+      width: 100%;
+      min-width: 400px;
+    }
+
     &-container {
       position: relative;
       margin-left: -15px;
@@ -271,10 +280,17 @@
 
     @include onPhone {
       width: 100%;
+      max-width: 500px;
+    }
+
+    @include onTablet {
+      margin: 0 30px;
     }
   }
 
   &__title {
+    position: relative;
+    z-index: 100;
     text-align: start;
     font-size: 34px;
     line-height: 44px;
@@ -322,6 +338,8 @@
   }
 
   &__subtitle {
+    position: relative;
+    z-index: 100;
     margin-top: 41px;
     font-size: 16px;
     line-height: 22px;
@@ -344,7 +362,7 @@
 
     @include onPhone {
       margin: auto;
-      margin-top: 40px;
+      margin-top: 60px;
       height: 52px;
       width: 100%;
     }
@@ -362,6 +380,10 @@
       height: 130px;
     }
 
+    @include onTablet {
+      right: 40px;
+    }
+
     @include onDesktop {
       top: 40px;
     }
@@ -377,6 +399,10 @@
         width: 175px;
         top: 40px;
         right: 0px;
+      }
+
+      @include onTablet {
+        right: 10px;
       }
     }
   }
@@ -430,6 +456,10 @@
     @include onPhone {
       margin-left: 15px;
       margin-top: 90px;
+    }
+
+    @include onTablet {
+      margin-left: 30px;
     }
   }
 

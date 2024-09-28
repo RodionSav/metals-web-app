@@ -1,4 +1,4 @@
-@import './utils/mixins';
+@import "./utils/mixins";
 
 .adress {
   padding-top: 145px;
@@ -29,11 +29,21 @@
       margin-left: 15px;
       margin-bottom: 30px;
     }
+
+    @include onTablet {
+      margin-left: 30px;
+    }
   }
 
   &-img {
+    user-select: none;
+    pointer-events: none;
 
     @include onPhone {
+      width: 100%;
+    }
+
+    @include onTablet {
       width: 100%;
     }
 
@@ -42,6 +52,8 @@
     }
 
     &-map {
+      pointer-events: none;
+
       @include onPhone {
         position: relative;
         width: 100%;

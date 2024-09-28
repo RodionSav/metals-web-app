@@ -26,6 +26,10 @@
     @include onPhone {
       margin: 0 15px;
     }
+
+    @include onTablet {
+      margin: 0 30px;
+    }
   }
 
   &__article {
@@ -46,5 +50,11 @@
     letter-spacing: 0.013em;
     margin-top: 30px;
     margin-bottom: 20px;
+  }
+
+  &-phone {
+    position: absolute;
+    top: 900px;
+    right: 30px;
   }
 }

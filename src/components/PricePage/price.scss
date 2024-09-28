@@ -18,6 +18,10 @@
     @include onPhone {
       margin: 0 15px;
     }
+
+    @include onTablet {
+      margin: 0 30px;
+    }
   }
 
   &__title {
@@ -45,6 +49,10 @@
   &__section {
     padding-bottom: 150px;
 
+    @include onTablet {
+      margin: 0 30px;
+    }
+
     &__title {
       font-size: 52px;
       font-weight: 600;
@@ -56,5 +64,11 @@
         display: none;
       }
     }
+  }
+
+  &-phone {
+    position: absolute;
+    top: 900px;
+    right: 30px;
   }
 }

@@ -8,7 +8,7 @@ export const Footer = () => {
         <div className="footer-container">
           <div className="footer-logo__main-container footer-item-container-first">
             <div className="footer-logo-container">
-              <NavLink to="/">
+              <NavLink to="/" className='footer-logo__link'>
                 <img
                   src="images/logo.svg"
                   className="footer-img"

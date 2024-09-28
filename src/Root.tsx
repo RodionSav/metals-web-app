@@ -18,10 +18,6 @@ export const Root = () => {
           <Route path="products" element={<ProductPage />} />
           <Route path="contacts" element={<ContactsPage />} />
           <Route path="prices" element={<PricePage />} />
-          {/* <Route path="*" element={<PageNotFound />} /> */}
-
-          {/* <Route index path="/about" element={<AboutPage />} /> */}
-
         </Route>
 
       </Routes>

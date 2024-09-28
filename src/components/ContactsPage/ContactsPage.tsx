@@ -1,10 +1,15 @@
 import "./contacts.scss";
 import "../../styles/page.scss";
 // import "./form.scss";
-import '../Form/form.scss';
+import "../Form/form.scss";
 import "../../styles/adress.scss";
+import { useEffect } from "react";
 
 export const ContactsPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <section className="contacts__header">
@@ -64,7 +69,11 @@ export const ContactsPage = () => {
               className="adress-img-map"
               srcSet="images/map-data-img-phone.png"
             />
-            <img src="images/map-data-img.png" className="adress-img-map" alt="adress-map-data" />
+            <img
+              src="images/map-data-img.png"
+              className="adress-img-map"
+              alt="adress-map-data"
+            />
           </picture>
         </div>
       </section>

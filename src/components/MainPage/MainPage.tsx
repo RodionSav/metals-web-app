@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "./main.scss";
 import "./about.scss";
 import "../../styles/adress.scss";
@@ -13,6 +13,11 @@ import "swiper/css/pagination";
 import { ReviewCard } from "../ReviewCard/ReviewCard";
 
 export const MainPage = () => {
+  const navigate = useNavigate();
+
+  const handleContainerClick = () => {
+    navigate("/products");
+  };
   return (
     <>
       <section className="main">
@@ -42,17 +47,21 @@ export const MainPage = () => {
                 <h3 className="main-pluses__title">Доставка</h3>
               </div>
             </div>
-            <img
-              src="images/phone-link-img.svg"
-              className="main-phone__link main-phone__link-desktop"
-              alt="phone-link"
-            />
+            <NavLink to="/contacts">
+              <img
+                src="images/phone-link-img.svg"
+                className="main-phone__link main-phone__link-desktop"
+                alt="phone-link"
+              />
+            </NavLink>
           </div>
-          <img
+          <NavLink to="/contacts">
+            <img
               src="images/phone-link-img.svg"
               className="main-phone__link main-phone__link-mobile"
               alt="phone-link"
             />
+          </NavLink>
         </div>
       </section>
       <section className="about page__section">
@@ -149,9 +158,13 @@ export const MainPage = () => {
         <h1 className="page__title-600 catalog__title page__title-main">
           Каталог продукции
         </h1>
-        <div className="catalog-container">
+        <div className="catalog-container" onClick={handleContainerClick}>
           {metals.slice(0, 4).map((item) => (
-            <ProductCard title={item.type} imageLink={item.card_image} />
+            <ProductCard
+              key={item.id}
+              title={item.type}
+              imageLink={item.card_image}
+            />
           ))}
         </div>
         <div className="catalog-container-phone">
@@ -160,20 +173,6 @@ export const MainPage = () => {
             spaceBetween={10}
             slidesPerView={1}
             loop={true}
-            breakpoints={{
-              640: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-              },
-              768: {
-                slidesPerView: 3,
-                spaceBetween: 30,
-              },
-              1024: {
-                slidesPerView: 4,
-                spaceBetween: 40,
-              },
-            }}
           >
             {metals.map((item) => (
               <SwiperSlide
@@ -185,7 +184,7 @@ export const MainPage = () => {
             ))}
           </Swiper>
         </div>
-        <NavLink to={"/"} className="page__button catalog__button">
+        <NavLink to={"/products"} className="page__button catalog__button">
           Смотреть весь каталог
         </NavLink>
       </section>
@@ -240,7 +239,7 @@ export const MainPage = () => {
             />
             <picture className="question-img">
               <source
-                media="(max-width: 767px)"
+                media="(max-width: 1000px)"
                 srcSet="images/man-img-mobile.png"
               />
               <img src="images/man-img.png" alt="man" />

@@ -18,6 +18,10 @@
     @include onPhone {
       margin: 0 15px;
     }
+
+    @include onTablet {
+      margin: 0 30px;
+    }
   }
 
   &__title {
@@ -144,6 +148,7 @@
   &-phone {
     &__link {
       // position: absolute;
+      cursor: pointer;
 
       @include onPhone {
         width: 62px;

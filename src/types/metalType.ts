@@ -6,6 +6,7 @@ export interface MetalItem {
 }
 
 export interface Metal {
+  id: number;
   type: string;
   card_image: string;
   detail_image: string;
@@ -13,6 +14,7 @@ export interface Metal {
 }
 
 export interface Review {
+  id: number;
   name: string;
   position: string;
   image: string;

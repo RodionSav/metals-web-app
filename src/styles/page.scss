@@ -11,6 +11,11 @@
       text-align: start;
       margin: 0 15px;
     }
+
+    @include onTablet {
+      margin-left: 30px;
+      margin-right: 30px;
+    }
   }
 
   &__title {

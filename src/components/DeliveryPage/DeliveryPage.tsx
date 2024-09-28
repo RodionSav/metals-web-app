@@ -1,12 +1,22 @@
 import "./delivery.scss";
 import "../../styles/page.scss";
+import { NavLink } from "react-router-dom";
 
 export const DeliveryPage = () => {
   return (
     <>
       <section className="delivery__section">
+        <NavLink to="/contacts" className='delivery-phone'>
+          <img
+            src="images/phone-link-img.svg"
+            className="main-phone__link main-phone__link-desktop"
+            alt="phone-link"
+          />
+        </NavLink>
         <div className="delivery-container">
-          <h1 className="page__title-large delivery__section__title">Доставка от DSR</h1>
+          <h1 className="page__title-large delivery__section__title">
+            Доставка от DSR
+          </h1>
         </div>
       </section>
       <section className="page__section delivery__article">

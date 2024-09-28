@@ -2,6 +2,7 @@ import { Metal } from "../types/metalType";
 
 export const metals: Metal[] = [
   {
+    id: 1,
     type: "Латунь",
     card_image: "images/latun.png",
     detail_image: "images/detail-latun.png",
@@ -39,6 +40,7 @@ export const metals: Metal[] = [
     ],
   },
   {
+    id: 2,
     type: "Медь",
     card_image: "images/med.png",
     detail_image: "images/details-med.png",
@@ -82,6 +84,7 @@ export const metals: Metal[] = [
     ],
   },
   {
+    id: 3,
     type: "Алюминий",
     card_image: "images/aluminiy.png",
     detail_image: "images/aluminiy-details.png",
@@ -119,6 +122,7 @@ export const metals: Metal[] = [
     ],
   },
   {
+    id: 4,
     type: "Бронза",
     card_image: "images/bronza.png",
     detail_image: "images/bronza-details.png",
@@ -156,6 +160,7 @@ export const metals: Metal[] = [
     ],
   },
   {
+    id: 5,
     type: "Никель",
     card_image: "images/nickel-details.png",
     detail_image: "images/nickel-details.png",
@@ -181,6 +186,7 @@ export const metals: Metal[] = [
     ],
   },
   {
+    id: 6,
     type: "Припой",
     card_image: "images/solder-details.png",
     detail_image: "images/solder-details.png",
@@ -209,21 +215,25 @@ export const metals: Metal[] = [
 
 export const reviews = [
   {
+    id: 1,
     name: "Евгений Садков",
     position: "Программа – Экспресс Рассрочка",
     image: "images/Evgeniy-img.png",
   },
   {
+    id: 2,
     name: "Анастасия Майер",
     position: "Инвестиции – Вклад Активный",
     image: "images/Anastasia-img.png",
   },
   {
+    id: 3,
     name: "Фанзиль Гарипов",
     position: "Программа – Авто Рассрочка",
     image: "images/Faniel-img.png",
   },
   {
+    id: 4,
     name: "Фанзиль Гарипов",
     position: "Программа – Авто Рассрочка",
     image: "images/Faniel-img.png",

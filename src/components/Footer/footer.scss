@@ -13,6 +13,10 @@
     height: 610px;
   }
 
+  @include onTablet {
+    height: 850px;
+  }
+
   @include onDesktop {
     width: 100%;
   }
@@ -48,6 +52,15 @@
       gap: 33px;
     }
 
+    // @include onTablet {
+    //   flex-direction: column;
+    //   gap: 33px;
+    // }
+
+    @include onTablet {
+      flex-direction: column;
+    }
+
     @include onDesktop {
       padding-top: 80px;
       gap: 200px;
@@ -62,6 +75,14 @@
       width: 100%;
       margin: auto;
       max-width: 340px;
+      align-items: start;
+      gap: 28px;
+    }
+
+    @include onTablet {
+      width: 100%;
+      margin: auto;
+      max-width: 560px;
       align-items: start;
       gap: 28px;
     }
@@ -114,6 +135,11 @@
       @include onPhone {
         gap: 5px;
       }
+    }
+
+    &__link {
+      display: flex;
+      gap: 5px;
     }
 
     &__paragraph {
