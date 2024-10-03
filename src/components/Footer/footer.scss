@@ -10,7 +10,7 @@
     display: block;
     grid-template-columns: repeat(2, 1fr);
     padding: 34px 20px;
-    height: 610px;
+    height: 900px;
   }
 
   @include onTablet {
@@ -57,14 +57,15 @@
     //   gap: 33px;
     // }
 
-    @include onTablet {
-      flex-direction: column;
-    }
-
     @include onDesktop {
       padding-top: 80px;
       gap: 200px;
       justify-content: center;
+    }
+
+    @include onTablet {
+      flex-direction: column;
+      gap: 50px;
     }
   }
 
@@ -72,6 +73,7 @@
     display: flex;
 
     @include onPhone {
+      display: block;
       width: 100%;
       margin: auto;
       max-width: 340px;
@@ -105,6 +107,7 @@
       font-size: 14px;
       font-weight: 600;
       line-height: 26.4px;
+      margin-top: 20px;
       margin-bottom: 20px;
     }
 

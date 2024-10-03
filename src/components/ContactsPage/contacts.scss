@@ -7,6 +7,14 @@
     height: 694px;
     background-image: url('../../../public/images/contacts-img.png');
 
+    @include onPhone {
+      height: 200px;
+    }
+
+    @include onTablet {
+      height: 400px;
+    }
+
     &-container {
       margin: auto;
       max-width: 1490px;
@@ -16,12 +24,20 @@
       }
 
       @include onTablet {
-        margin: 0 30px;
+        margin: 0 100px;
       }
     }
   }
 
   &__title {
     padding-top: 438px;
+
+    @include onPhone {
+      padding-top: 140px;
+    }
+
+    @include onTablet {
+      padding-top: 300px;
+    }
   }
 }

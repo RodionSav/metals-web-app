@@ -6,14 +6,7 @@ export const DeliveryPage = () => {
   return (
     <>
       <section className="delivery__section">
-        <NavLink to="/contacts" className='delivery-phone'>
-          <img
-            src="images/phone-link-img.svg"
-            className="main-phone__link main-phone__link-desktop"
-            alt="phone-link"
-          />
-        </NavLink>
-        <div className="delivery-container">
+        <div className="delivery-container-page">
           <h1 className="page__title-large delivery__section__title">
             Доставка от DSR
           </h1>
@@ -52,6 +45,13 @@ export const DeliveryPage = () => {
           Мы стремимся сделать процесс доставки максимально удобным и быстрым
           для наших клиентов.
         </p>
+        <NavLink to="/contacts" className="delivery-phone">
+          <img
+            src="images/phone-link-img.svg"
+            className="main-phone__link main-phone__link-desktop"
+            alt="phone-link"
+          />
+        </NavLink>
       </section>
     </>
   );

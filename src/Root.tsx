@@ -6,10 +6,12 @@ import { DeliveryPage } from "./components/DeliveryPage/DeliveryPage";
 import { ProductPage } from "./components/ProductPage/ProductPage";
 import { ContactsPage } from "./components/ContactsPage/ContactsPage";
 import { PricePage } from "./components/PricePage/PricePage";
+import { ScrollToTop } from "./utils/ScrollToUp";
 
 export const Root = () => {
   return (
     <HashRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<App />}>
           <Route index element={<MainPage />} />
@@ -19,7 +21,6 @@ export const Root = () => {
           <Route path="contacts" element={<ContactsPage />} />
           <Route path="prices" element={<PricePage />} />
         </Route>
-
       </Routes>
     </HashRouter>
   );

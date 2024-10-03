@@ -1,6 +1,16 @@
+@import '../../styles/utils/mixins';
+
 .review {
   &__card {
     height: 294px;
+
+    @include onDesktop {
+      height: 400px;
+    }
+
+    @include onTablet {
+      height: 294px;
+    }
 
     &-img {
       width: 100%;

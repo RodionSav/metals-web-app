@@ -9,6 +9,10 @@
       height: 200px;
       background-size: cover;
     }
+
+    @include onTablet {
+      height: 400px;
+    }
   }
 
   &__main-title {
@@ -16,6 +20,10 @@
 
     @include onPhone {
       padding-top: 140px;
+    }
+
+    @include onTablet {
+      padding-top: 300px;
     }
   }
 
@@ -27,7 +35,9 @@
     flex-wrap: wrap;
 
     @include onTablet {
-      justify-content: center;
+      margin: auto;
+      width: 910px;
+      justify-content: start;
     }
   }
 }

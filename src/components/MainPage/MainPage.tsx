@@ -276,6 +276,96 @@ export const MainPage = () => {
           </Swiper>
         </div>
       </section>
+      <section className="page__section partners">
+        <h2 className="partners__title page__title-main">Наши партнеры</h2>
+
+        <Swiper
+          // className="partners-container-slider"
+          modules={[Navigation]}
+          spaceBetween={10}
+          slidesPerView={1}
+          navigation
+          // pagination={{ clickable: true }}
+          // loop={true}
+          breakpoints={{
+            390: {
+              slidesPerView: 1,
+              // spaceBetween: 20,
+            },
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 40,
+            },
+          }}
+        >
+          <SwiperSlide>
+            <img src="images/novosibirsk-zavod.svg" alt="novosibirsk-zavod" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="images/evraz.png" alt="evraz" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="images/arcelor.png" alt="arcelor" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="images/magnitogorsk.png" alt="magnitogorsk" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="images/hlmk.png" alt="hlmk" />
+          </SwiperSlide>
+        </Swiper>
+
+        <h2 className="partners__title page__title-main">Наши клиенты</h2>
+
+        <Swiper
+          // className="partners-container-slider"
+          modules={[Navigation]}
+          spaceBetween={10}
+          slidesPerView={1}
+          navigation
+          // pagination={{ clickable: true }}
+          // loop={true}
+          breakpoints={{
+            390: {
+              slidesPerView: 1,
+              // spaceBetween: 20,
+            },
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 40,
+            },
+          }}
+        >
+          <SwiperSlide>
+            <img src="images/svetly-img.png" alt="nso" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="images/domarsh.png" alt="domarsh" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="images/novomarusino.png" alt="novomarusino" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="images/ogni-sibiry.png" alt="ogni-sibiry" />
+          </SwiperSlide>
+        </Swiper>
+      </section>
       <section className="adress__section">
         <h2 className="adress__title page__title-main">Адресс</h2>
         <div className="adress-img-container">

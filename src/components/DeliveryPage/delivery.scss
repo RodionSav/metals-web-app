@@ -10,16 +10,25 @@
       background-size: cover;
     }
 
+    @include onTablet {
+      height: 400px;
+      padding-left: 80px;
+    }
+
     &__title {
       padding-top: 367px;
 
       @include onPhone {
         padding-top: 140px;
       }
+
+      @include onTablet {
+        padding-top: 300px;
+      }
     }
   }
 
-  &-container {
+  &-container-page {
     margin: auto;
     max-width: 1490px;
 
@@ -33,6 +42,7 @@
   }
 
   &__article {
+    position: relative;
     text-align: start;
     padding-top: 100px;
     padding-bottom: 282px;
@@ -54,7 +64,7 @@
 
   &-phone {
     position: absolute;
-    top: 900px;
-    right: 30px;
+    // top: 900px;
+    right: 0;
   }
 }

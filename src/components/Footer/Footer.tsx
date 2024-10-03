@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./footer.scss";
 
 export const Footer = () => {
@@ -8,7 +8,7 @@ export const Footer = () => {
         <div className="footer-container">
           <div className="footer-logo__main-container footer-item-container-first">
             <div className="footer-logo-container">
-              <NavLink to="/" className='footer-logo__link'>
+              <NavLink to="/" className="footer-logo__link">
                 <img
                   src="images/logo.svg"
                   className="footer-img"
@@ -49,11 +49,6 @@ export const Footer = () => {
                   Контакты
                 </NavLink>
               </li>
-              <li className="footer__item">
-                <NavLink to="/reviews" className="footer__link">
-                  Отзывы
-                </NavLink>
-              </li>
             </ul>
           </div>
         </div>
@@ -80,11 +75,15 @@ export const Footer = () => {
                 +79263693819
               </p>
               <div className="footer-networks-logo-container">
-                <img src="images/viber-logo.svg" alt="viber-logo" />
-                <img src="images/telegram-logo.svg" alt="telegram-logo" />
-                <img src="images/whatsapp-logo.svg" alt="whatsapp-logo" />
+                <Link to="/">
+                  <img src="images/viber-logo.svg" alt="viber-logo" />
+                </Link>
+                {/* <img src="images/telegram-logo.svg" alt="telegram-logo" /> */}
+                <Link to='/'>
+                  <img src="images/whatsapp-logo.svg" alt="whatsapp-logo" />
+                </Link>
               </div>
-              <p>sale@asynt.net</p>
+              <p>sales@dsr-metal.com</p>
             </div>
           </div>
         </div>
