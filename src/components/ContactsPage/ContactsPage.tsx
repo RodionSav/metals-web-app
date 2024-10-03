@@ -4,6 +4,7 @@ import "./contacts.scss";
 import "../../styles/page.scss";
 import "../Form/form.scss";
 import "../../styles/adress.scss";
+import { Text } from "@chakra-ui/react";
 
 export const ContactsPage = () => {
   const [formData, setFormData] = useState({
@@ -88,7 +89,10 @@ export const ContactsPage = () => {
 
     if (validateForm()) {
       try {
-        const response = await axios.post("https://web.dsr-metal.com/api/submit-form", formData);
+        const response = await axios.post(
+          "https://web.dsr-metal.com/api/submit-form",
+          formData
+        );
         console.log("Форма успешно отправлена", response.data);
       } catch (error) {
         console.error("Ошибка при отправке формы", error);
@@ -102,7 +106,9 @@ export const ContactsPage = () => {
     <>
       <section className="contacts__header">
         <div className="contacts__header-container">
-          <h1 className="page__title-large contacts__title">Контакты DSR Metal</h1>
+          <h1 className="page__title-large contacts__title">
+            Контакты DSR Metal
+          </h1>
         </div>
       </section>
       <section className="page__section contacts">
@@ -114,9 +120,21 @@ export const ContactsPage = () => {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className={`form__field ${errors.name ? "form__field--error" : ""}`}
+              className={`form__field ${
+                errors.name ? "form__field--error" : ""
+              }`}
             />
-            {errors.name && <p className="form__error">{errors.name}</p>}
+            {errors.name && (
+              <Text
+                color="red.500"
+                fontSize="sm"
+                mt="2"
+                position="absolute"
+                className="form__error"
+              >
+                {errors.name}
+              </Text>
+            )}
           </div>
           <div className="form__field-container">
             <h2 className="form__title">Телефон</h2>
@@ -125,9 +143,21 @@ export const ContactsPage = () => {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              className={`form__field ${errors.phone ? "form__field--error" : ""}`}
+              className={`form__field ${
+                errors.phone ? "form__field--error" : ""
+              }`}
             />
-            {errors.phone && <p className="form__error">{errors.phone}</p>}
+            {errors.phone && (
+              <Text
+                color="red.500"
+                fontSize="sm"
+                mt="2"
+                position="absolute"
+                className="form__error"
+              >
+                {errors.phone}
+              </Text>
+            )}
           </div>
           <div className="form__field-container">
             <h2 className="form__title">E-Mail</h2>
@@ -136,9 +166,21 @@ export const ContactsPage = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className={`form__field ${errors.email ? "form__field--error" : ""}`}
+              className={`form__field ${
+                errors.email ? "form__field--error" : ""
+              }`}
             />
-            {errors.email && <p className="form__error">{errors.email}</p>}
+            {errors.email && (
+              <Text
+                color="red.500"
+                fontSize="sm"
+                mt="2"
+                position="absolute"
+                className="form__error"
+              >
+                {errors.email}
+              </Text>
+            )}
           </div>
           <div className="form__field-container">
             <h2 className="form__title">Комментарий</h2>
@@ -146,9 +188,21 @@ export const ContactsPage = () => {
               name="comment"
               value={formData.comment}
               onChange={handleChange}
-              className={`form__field form__field__textarea ${errors.comment ? "form__field--error" : ""}`}
+              className={`form__field form__field__textarea ${
+                errors.comment ? "form__field--error" : ""
+              }`}
             ></textarea>
-            {errors.comment && <p className="form__error">{errors.comment}</p>}
+            {errors.comment && (
+              <Text
+                color="red.500"
+                fontSize="sm"
+                mt="2"
+                position="absolute"
+                className="form__error"
+              >
+                {errors.comment}
+              </Text>
+            )}
           </div>
           <div className="form__button-container">
             <button type="submit" className="page__button form__button">
@@ -156,6 +210,39 @@ export const ContactsPage = () => {
             </button>
           </div>
         </form>
+        <p className="page__paragraph form__paragraph">
+          ЩЩЩ <br /> ДСР <br /> 624760, Россия, Свердловская область, Верхняя
+          Салда, ул. Парковая 1 <br /> Телефон: +7 (34345) 6-23-66, +7 (34345)
+          6-00-01 <br /> Факс: +7 (34345) 5-14-98, +7 (34345) 6-20-68 E-mail:
+          info@vsmpo-avisma.ru, td-info@vsmpo-avisma.ru
+        </p>
+        <div className="adress-img-container">
+          <picture className="adress-img">
+            <source
+              media="(max-width: 767px)"
+              className="adress-img"
+              srcSet="images/map-img-phone.png"
+            />
+            <img
+              src="images/adress-img.png"
+              className="adress-img"
+              alt="adress-map"
+            />
+          </picture>
+
+          <picture className="adress-img-map">
+            <source
+              media="(max-width: 767px)"
+              className="adress-img-map"
+              srcSet="images/map-data-img-phone.png"
+            />
+            <img
+              src="images/map-data-img.png"
+              className="adress-img-map"
+              alt="adress-map-data"
+            />
+          </picture>
+        </div>
       </section>
     </>
   );
