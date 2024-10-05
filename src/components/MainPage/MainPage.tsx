@@ -11,47 +11,54 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { ReviewCard } from "../ReviewCard/ReviewCard";
+import { useTranslation } from "react-i18next";
+import { useLang } from "../../context/LangContext";
 
 export const MainPage = () => {
   const navigate = useNavigate();
+  const { i18n, t } = useTranslation();
+  const { lang, setLang } = useLang();
 
   const handleContainerClick = () => {
     navigate("/products");
   };
+
   return (
     <>
       <section className="main">
         <div className="main-container">
           <div className="main__title-container">
-            <h1 className="page__title-large main__title">
-              Продажа и доставка <br></br> металлопроката <br></br> по всему
-              миру
-            </h1>
-            <p className="main__subtitle">
-              Ежедневно с нами работают и остаются <br></br> довольными более 30
-              клиентов
-              <br></br>
-              <br></br> Качество и надежность.
-            </p>
+            <h1
+              className="page__title-large main__title"
+              dangerouslySetInnerHTML={{ __html: t("main.title") }}
+            />
+            <p
+              className="main__subtitle"
+              dangerouslySetInnerHTML={{ __html: t("main.subtitle") }}
+            />
             <NavLink to={"/"} className="main__button page__button">
-              Смотреть каталог
+              {t("main.view_catalog")}
             </NavLink>
           </div>
           <div className="main-phone-container">
             <div className="main-pluses__main-container">
               <div className="main-pluses-container">
-                <h3 className="main-pluses__title">Выгодные цены</h3>
                 <h3 className="main-pluses__title">
-                  Большой ассортимент товаров
+                  {t("main.benefits.price")}
                 </h3>
-                <h3 className="main-pluses__title">Доставка</h3>
+                <h3 className="main-pluses__title">
+                  {t("main.benefits.range")}
+                </h3>
+                <h3 className="main-pluses__title">
+                  {t("main.benefits.delivery")}
+                </h3>
               </div>
             </div>
             <NavLink to="/contacts">
               <img
                 src="images/phone-link-img.svg"
                 className="main-phone__link main-phone__link-desktop"
-                alt="phone-link"
+                alt={t("pricePage.phone_link_alt")}
               />
             </NavLink>
           </div>
@@ -59,111 +66,57 @@ export const MainPage = () => {
             <img
               src="images/phone-link-img.svg"
               className="main-phone__link main-phone__link-mobile"
-              alt="phone-link"
+              alt={t("pricePage.phone_link_alt")}
             />
           </NavLink>
         </div>
       </section>
+
       <section className="about page__section">
         <div className="main-pluses__main-container-phone">
           <h2 className="main-pluses__title-phone main-pluses__title-phone-first">
-            Выгодные цены
+            {t("main.benefits.price")}
           </h2>
           <h2 className="main-pluses__title-phone main-pluses__title-phone-second">
-            Большой ассортимент товаров
+            {t("main.benefits.range")}
           </h2>
-          <h2 className="main-pluses__title-phone">Доставка</h2>
+          <h2 className="main-pluses__title-phone">
+            {t("main.benefits.delivery")}
+          </h2>
         </div>
         <div className="about__title-container">
-          <h3 className="page__title-400 about__subtitle">Информация о нас</h3>
-          <h2 className="page__title-600 about__title">Наша компания</h2>
+          <h3 className="page__title-400 about__subtitle">
+            {t("about.info_title")}
+          </h3>
+          <h2 className="page__title-600 about__title">
+            {t("about.company_title")}
+          </h2>
         </div>
         <div className="about__paragraph-container">
           <p className="page__paragraph about__paragraph">
-            Наша компания уже более 9 лет является надежным партнером на рынке
-            металлопроката, предлагая широкий ассортимент металлопроката оптом и
-            в розницу.
+            {t("about.description_1")}
           </p>
-          <br></br>
+          <br />
           <p className="page__paragraph about__paragraph">
-            Мы гордимся тем, что за годы работы установили прочные деловые связи
-            с ключевыми предприятиями авиа промышленности, машиностроения и
-            цветной металлургии.
+            {t("about.description_2")}
           </p>
-          <br></br>
+          <br />
           <p className="page__paragraph about__paragraph">
-            Опытный коллектив компании быстро и грамотно произведет расчет
-            покупаемой продукции, оформит все необходимые документы на отгрузку.
+            {t("about.description_3")}
           </p>
-        </div>
-        <div className="about__card-container">
-          <p className="about__card__title about__card-first">
-            Приоритет нашей работы – это интерес клиента. <br></br> А основные
-            принципы: бережное отношение к заказчику и расширение ассортимента
-            продукции.{" "}
-          </p>
-          <div className="about__card about__card-second">
-            <img
-              src="images/hands-img.svg"
-              className="about__card-img"
-              alt="hands"
-            />
-            <h2 className="page__title-400 about__card__subtitle">
-              Работаем с ведущими металлургическими компаниями
-            </h2>
-          </div>
-          <div className="about__card about__card-third">
-            <img
-              src="images/car-img.svg"
-              className="about__card-img"
-              alt="hands"
-            />
-            <h2 className="page__title-400 about__card__subtitle">
-              Возможность поставки ЛЮБОЙ продукции стали и сплавов
-            </h2>
-          </div>
-          <div className="about__card about__card-fourth">
-            <img
-              src="images/time-img.svg"
-              className="about__card-img about__card-img-third"
-              alt="hands"
-            />
-            <h2 className="page__title-400 about__card__subtitle">
-              Быстрая обработка заявок
-            </h2>
-          </div>
-          <div className="about__card about__card-fifth">
-            <img
-              src="images/earth-img.svg"
-              className="about__card-img  about__card-img-fourth"
-              alt="hands"
-            />
-            <h2 className="page__title-400 about__card__subtitle">
-              Доставка по всему миру
-            </h2>
-          </div>
-          <div className="about__card about__card-sixth">
-            <img
-              src="images/dnk-img.svg"
-              className="about__card-img about__card-img-fifth"
-              alt="hands"
-            />
-            <h2 className="page__title-400 about__card__subtitle">
-              Индивидуальный подход
-            </h2>
-          </div>
         </div>
       </section>
+
       <section className="catalog page__section">
         <h1 className="page__title-600 catalog__title page__title-main">
-          Каталог продукции
+          {t("catalog.title")} {/* Заголовок каталога */}
         </h1>
         <div className="catalog-container" onClick={handleContainerClick}>
           {metals.slice(0, 4).map((item) => (
             <ProductCard
               key={item.id}
-              title={item.type}
               imageLink={item.card_image}
+              title={i18n.language === "en" ? item.type.en : item.type.ru} // Получаем название металла в зависимости от языка
             />
           ))}
         </div>
@@ -176,59 +129,40 @@ export const MainPage = () => {
           >
             {metals.map((item) => (
               <SwiperSlide
-                key={item.type}
+                key={item.type.ru}
                 style={{ display: "flex", justifyContent: "center" }}
               >
-                <ProductCard title={item.type} imageLink={item.card_image} />
+                <ProductCard
+                  key={item.id} // Добавим ключ для каждого элемента
+                  imageLink={item.card_image}
+                  title={i18n.language === "en" ? item.type.en : item.type.ru} // Получаем название металла в зависимости от языка
+                />{" "}
               </SwiperSlide>
             ))}
           </Swiper>
         </div>
         <NavLink to={"/products"} className="page__button catalog__button">
-          Смотреть весь каталог
+          {t("catalog.view_full_catalog")} {/* Текст кнопки */}
         </NavLink>
-      </section>
-      <section className="delivery page__section">
-        <div className="delivery-container">
-          <h2 className="page__title-main delivery__title">Доставка</h2>
-          <p className="page__paragraph delivery__paragraph">
-            Чтобы максимально сократить временные затраты и транспортные расходы
-            наших клиентов, наша компания предоставляет услуги по доставке
-            металлопроката и труб на объект Заказчика по всему мира. <br></br>
-            <br></br>
-            Наши менеджеры составляют график доставки на объект, учитывая все
-            Ваши требования и пожелания по поводу времени доставки, и сделают
-            все от них зависящее, чтобы продукция была доставлена в оговоренные
-            сроки.
-          </p>
-        </div>
-        <div className="delivery-img-container">
-          <img
-            src="images/truck-img.png"
-            className="delivery-img"
-            alt="truck"
-          />
-        </div>
       </section>
       <section className="question">
         <h2 className="question__title question__title-phone page__title-300">
-          У вас остались вопросы?
+          {t("question.title")}
         </h2>
         <div className="question-container">
           <div className="question__title-container">
             <h2 className="question__title question__title-first page__title-300">
-              У вас остались вопросы?
+              {t("question.title")}
             </h2>
             <h2 className="question__title question__title-blue page__title-700">
-              Закажите консультацию специалиста
+              {t("question.consultation_title")}
             </h2>
             <h3 className="question__subtitle page__title-300">
-              Мы подробно ответим на все ваши вопросы и подберем наиболее
-              удобный вариант вклада
+              {t("question.consultation_subtitle")}
             </h3>
 
             <NavLink to="/" className="question__button page__button-secondary">
-              Заказать консультацию
+              {t("question.consultation_button")}
             </NavLink>
           </div>
           <div>
@@ -247,8 +181,11 @@ export const MainPage = () => {
           </div>
         </div>
       </section>
+
       <section className="reviews">
-        <h2 className="reviews__title page__title-main">Отзывы клиентов</h2>
+        <h2 className="reviews__title page__title-main">
+          {t("reviews.title")}
+        </h2>
         <div className="reviews-container">
           <Swiper
             modules={[Navigation]}
@@ -270,15 +207,20 @@ export const MainPage = () => {
           >
             {reviews.map((review, index) => (
               <SwiperSlide key={index}>
-                <ReviewCard review={review} />
+                <ReviewCard
+                  review={review}
+                  // @ts-ignore
+                  language={lang}
+                />
               </SwiperSlide>
             ))}
           </Swiper>
         </div>
       </section>
       <section className="page__section partners">
-        <h2 className="partners__title page__title-main">Наши партнеры</h2>
-
+        <h2 className="partners__title page__title-main">
+          {t("partners.title")}
+        </h2>
         <Swiper
           // className="partners-container-slider"
           modules={[Navigation]}
@@ -322,9 +264,9 @@ export const MainPage = () => {
             <img src="images/hlmk.png" alt="hlmk" />
           </SwiperSlide>
         </Swiper>
-
-        <h2 className="partners__title page__title-main">Наши клиенты</h2>
-
+        <h2 className="partners__title page__title-main">
+          {t("clients.title")}
+        </h2>
         <Swiper
           // className="partners-container-slider"
           modules={[Navigation]}
@@ -367,7 +309,7 @@ export const MainPage = () => {
         </Swiper>
       </section>
       <section className="adress__section">
-        <h2 className="adress__title page__title-main">Адресс</h2>
+        <h2 className="adress__title page__title-main"> {t("adress.title")}</h2>
         <div className="adress-img-container">
           <picture className="adress-img">
             <source

@@ -1,7 +1,10 @@
 import { Link, NavLink } from "react-router-dom";
 import "./footer.scss";
+import { useTranslation } from "react-i18next";
 
 export const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="footer">
       <div className="footer__main-container">
@@ -22,31 +25,30 @@ export const Footer = () => {
               </NavLink>
             </div>
             <p className="page__title-500 footer-logo__paragraph">
-              Компания «ДСР» является крупной передовой компанией в сфере
-              металлоторговли.
+              {t("footer.companyDescription")}
             </p>
           </div>
           <div className="footer-item-container-second">
-            <h2 className="footer__title">Меню</h2>
+            <h2 className="footer__title">{t("footer.menu")}</h2>
             <ul className="footer__list">
               <li className="footer__item">
                 <NavLink to="/about" className="footer__link">
-                  О компании
+                  {t("footer.aboutCompany")}
                 </NavLink>
               </li>
               <li className="footer__item">
                 <NavLink to="/products" className="footer__link">
-                  Каталог
+                  {t("footer.catalog")}
                 </NavLink>
               </li>
               <li className="footer__item">
                 <NavLink to="/delivery" className="footer__link">
-                  Доставка
+                  {t("footer.delivery")}
                 </NavLink>
               </li>
               <li className="footer__item">
                 <NavLink to="/contacts" className="footer__link">
-                  Контакты
+                  {t("footer.contacts")}
                 </NavLink>
               </li>
             </ul>
@@ -54,19 +56,22 @@ export const Footer = () => {
         </div>
         <div className="footer-container footer-container-second">
           <div className="footer-item-container-third">
-            <h2 className="footer__title">График работы:</h2>
+            <h2 className="footer__title">{t("footer.workingHours")}</h2>
             <div className="footer-adress-container">
-              <p className="footer-adress__paragraph">Пн - Сб : 9:00 - 18:00</p>
-              <h3 className="footer-adress__title">Адрес:</h3>
               <p className="footer-adress__paragraph">
-                Киев, ул. Красноткацкая 87 <br />
-                <br />
-                Konstruktorska 13, Warszawa, Poland
+                {t("footer.workingDays")}
               </p>
+              <h3 className="footer-adress__title">
+                {t("footer.addressTitle")}
+              </h3>
+              <p
+                className="footer-adress__paragraph"
+                dangerouslySetInnerHTML={{ __html: t("footer.address") }}
+              />
             </div>
           </div>
           <div className="footer-item-container-fourth">
-            <h2 className="footer__title">Связаться с нами</h2>
+            <h2 className="footer__title">{t("footer.contactUs")}</h2>
             <div className="footer-networks-container">
               <p className="footer-networks-phone-numbers">
                 +79263717420
@@ -79,11 +84,11 @@ export const Footer = () => {
                   <img src="images/viber-logo.svg" alt="viber-logo" />
                 </Link>
                 {/* <img src="images/telegram-logo.svg" alt="telegram-logo" /> */}
-                <Link to='/'>
+                <Link to="/">
                   <img src="images/whatsapp-logo.svg" alt="whatsapp-logo" />
                 </Link>
               </div>
-              <p>sales@dsr-metal.com</p>
+              <p>{t("footer.email")}</p>
             </div>
           </div>
         </div>

@@ -22,8 +22,12 @@
   }
 
   @include onTablet {
-    height: 70px;
+    display: flex;
+    // justify-content: baseline;
+    height: 90px;
     padding: 12px 100px;
+    // justify-content: space-between;
+    // gap: 50px;
   }
 
   &__title {
@@ -34,7 +38,18 @@
 
   &-container {
     display: flex;
-    gap: 300px;
+
+    @include onPhone {
+      justify-content: space-between;
+    }
+
+    @include onDesktop {
+      gap: 300px;
+    }
+
+    @include onTablet {
+      gap: 50px;
+    }
   }
 
   &-logo {
@@ -74,13 +89,19 @@
       gap: 21px;
       margin-bottom: 15px;
 
+      @include onTablet {
+        margin-bottom: 5px;
+      }
+
       &-container {
         @include onPhone {
           display: none;
         }
 
         @include onTablet {
-          display: none;
+          margin-right: 50px;
+          // display: flex;
+          // gap: 5px;
         }
 
         // @media (min-width: 1001px) and (max-width: 1250px) {
@@ -99,6 +120,25 @@
         font-weight: 600;
         font-size: 14px;
         color: #02263e;
+
+        @include onTablet {
+          width: max-content;
+        }
+      }
+    }
+  }
+
+  &-lang {
+    &-container {
+      position: relative;
+      // right: 50px;\
+
+      @include onPhone {
+        left: 20px;
+      }
+
+      @include onDesktop {
+        right: 20px;
       }
     }
   }
@@ -121,6 +161,10 @@
     &__title {
       text-decoration: none;
       color: #02263e;
+
+      @include onTablet {
+        width: max-content;
+      }
 
       @include onDesktop {
         font-size: 12px;

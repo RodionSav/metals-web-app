@@ -1,0 +1,113 @@
+{
+  "header": {
+    "working_hours": "Mon - Sat: 9:00 AM - 6:00 PM",
+    "about_company": "About Company",
+    "products": "Products",
+    "delivery": "Delivery",
+    "contacts": "Contacts",
+    "working_hours_phone": "Mon - Sat : 9:00 - 18:00",
+    "email": "sale@asynt.net",
+    "phone_numbers": "+79263717420 / +79263693819"
+  },
+  "main": {
+    "title": "Sale and delivery of <br> rolled metal <br> worldwide",
+    "subtitle": "Every day, more than 30 customers work with us and remain <br> satisfied. <br></br> Quality and reliability.",
+    "view_catalog": "View catalog",
+    "benefits": {
+      "price": "Affordable prices",
+      "range": "Wide range of products",
+      "delivery": "Delivery"
+    }
+  },
+  "about": {
+    "info_title": "About us",
+    "company_title": "Our company",
+    "description_1": "For more than 9 years, our company has been a reliable partner in the metal rolling market, offering a wide range of metal products both wholesale and retail.",
+    "description_2": "We are proud that over the years we have established strong business relationships with key enterprises in the aviation industry, mechanical engineering, and non-ferrous metallurgy.",
+    "description_3": "Our experienced team quickly and competently calculates the purchased products and processes all the necessary shipping documents.",
+    "priority": "Our work priority is the customer’s interest. The main principles are careful attention to the customer and expanding the product range."
+  },
+  "about2": {
+    "title": "Company Reliability",
+    "paragraph": "DSR Metal has been operating effectively in the titanium market for over 5 years. <br><br> The main focus of the company is wholesale and retail trade of rolled metal. Over the years of successful work, the company has established close business relationships with metal product consumers – defense industry enterprises, machine-building plants, and non-ferrous metallurgy enterprises. <br><br> It is convenient and profitable to work with us: <br><br> 1. The processing time for a consumer request is no more than 2 hours, all rolled metal corresponds to the stated volume. <br> 2. Shipment of rolled metal to consumers is carried out directly from the warehouse. <br> 3. The rolled metal is delivered to the customer through transport companies around the world. <br> 4. Individual approach to each client.<br><br> The company's warehouse contains almost the entire range of existing metal products.<br><br> DSR Metal's products consist of five main types: <br>- titanium rolled metal<br>- aluminum rolled metal<br>- bronze rolled metal<br>- nickel rolled metal<br>- copper rolled metal<br><br> The warehouse meets modern standards and is designed for high-quality storage of rolled metal. The company's experienced team will quickly and competently calculate the purchased products, prepare all necessary shipping documents.<br><br> The main condition of our work is careful and attentive attitude towards the customer!"
+  },
+  "question": {
+    "title": "Do you have any questions?",
+    "consultation_title": "Request a consultation with a specialist",
+    "consultation_subtitle": "We will answer all your questions in detail and select the most convenient investment option for you",
+    "consultation_button": "Request a consultation"
+  },
+  "reviews": {
+    "title": "Reviews"
+  },
+  "partners": {
+    "title": "Our Partners"
+  },
+  "clients": {
+    "title": "Our Clients"
+  },
+  "adress": {
+    "title": "Adress"
+  },
+  "delivery": {
+    "title": "Delivery",
+    "paragraph": "To minimize the time and transportation costs of our clients, DRS-metal provides services for the delivery of rolled metal and pipes to the customer's site worldwide.<br><br>Delivery terms: EXW, FCA, FOB, CIF, CIP, CPT, DDP.<br><br>All you need to do is place an order and specify the desired delivery method. Our managers will schedule the delivery to the site, taking into account all your requirements and wishes regarding the delivery time, and will do everything possible to ensure that the products are delivered within the agreed time frame.<br><br>"
+  },
+  "contacts": {
+    "title": "Contacts DSR Metal",
+    "name": "Name",
+    "phone": "Phone",
+    "email": "E-Mail",
+    "comment": "Comment",
+    "submitButton": "Send Message",
+    "errors": {
+      "nameRequired": "Name is required",
+      "phoneRequired": "Phone is required",
+      "phoneInvalid": "Enter a valid phone number",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Enter a valid email",
+      "commentRequired": "Comment is required"
+    },
+    "successMessage": "Form submitted successfully",
+    "errorMessage": "Error sending form",
+    "formErrors": "Form contains errors",
+    "address": "Address: <br /> 624760, Russia, Sverdlovsk Oblast, Verkhnyaya Salda, Parkovaya St. 1 <br /> Phone: +7 (34345) 6-23-66, +7 (34345) 6-00-01 <br /> Fax: +7 (34345) 5-14-98, +7 (34345) 6-20-68 <br /> E-mail: info@vsmpo-avisma.ru, td-info@vsmpo-avisma.ru"
+  },
+  "footer": {
+    "companyDescription": "DSR-Metal is a large advanced company in the field of metal trading.",
+    "menu": "Menu",
+    "aboutCompany": "About Us",
+    "catalog": "Catalog",
+    "delivery": "Delivery",
+    "contacts": "Contacts",
+    "workingHours": "Working Hours:",
+    "workingDays": "Mon - Sat : 9:00 - 18:00",
+    "addressTitle": "Address:",
+    "address": "Kiev, Krasnotkatskaya St. 87 <br /> Konstruktorska 13, Warsaw, Poland",
+    "contactUs": "Contact Us",
+    "email": "sales@dsr-metal.com"
+  },
+  "catalog": {
+    "title": "Product Catalog",
+    "view_full_catalog": "View Full Catalog"
+  },
+  "pricePage": {
+    "title": "Prices",
+    "section_title": "Product prices",
+    "phone_link_alt": "phone-link"
+  },
+  "priceProductCard": {
+    "table_headers": {
+      "name": "Name",
+      "brand": "Brand",
+      "diameter_thickness": "Diameter, thickness",
+      "price_per_kg": "Price per kg"
+    },
+    "price_unclear": "clarify",
+    "price_link": "Price list",
+    "view_all_prices": "View full price list"
+  },
+  "productPage": {
+    "title": "Products"
+  }
+}

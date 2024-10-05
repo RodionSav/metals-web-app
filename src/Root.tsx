@@ -5,7 +5,7 @@ import { AboutPage } from "./components/AboutPage/AboutPage";
 import { DeliveryPage } from "./components/DeliveryPage/DeliveryPage";
 import { ProductPage } from "./components/ProductPage/ProductPage";
 import { ContactsPage } from "./components/ContactsPage/ContactsPage";
-import { PricePage } from "./components/PricePage/PricePage";
+// import { PricePage } from "./components/PricePage/PricePage";
 import { ScrollToTop } from "./utils/ScrollToUp";
 
 export const Root = () => {
@@ -19,7 +19,7 @@ export const Root = () => {
           <Route path="delivery" element={<DeliveryPage />} />
           <Route path="products" element={<ProductPage />} />
           <Route path="contacts" element={<ContactsPage />} />
-          <Route path="prices" element={<PricePage />} />
+          {/* <Route path="prices" element={<PricePage />} /> */}
         </Route>
       </Routes>
     </HashRouter>

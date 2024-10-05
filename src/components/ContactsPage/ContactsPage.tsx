@@ -5,8 +5,11 @@ import "../../styles/page.scss";
 import "../Form/form.scss";
 import "../../styles/adress.scss";
 import { Text } from "@chakra-ui/react";
+import { useTranslation } from "react-i18next";
 
 export const ContactsPage = () => {
+  const { t } = useTranslation();
+
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -30,28 +33,28 @@ export const ContactsPage = () => {
     switch (name) {
       case "name":
         if (!value.trim()) {
-          return "Имя обязательно";
+          return t("contacts.errors.nameRequired");
         }
         return "";
       case "phone":
         const phoneRegex = /^[0-9]{10,14}$/; // Простой regex для проверки номера телефона
         if (!value.trim()) {
-          return "Телефон обязателен";
+          return t("contacts.errors.phoneRequired");
         } else if (!phoneRegex.test(value)) {
-          return "Введите корректный телефон";
+          return t("contacts.errors.phoneInvalid");
         }
         return "";
       case "email":
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Простой regex для проверки email
         if (!value.trim()) {
-          return "Email обязателен";
+          return t("contacts.errors.emailRequired");
         } else if (!emailRegex.test(value)) {
-          return "Введите корректный email";
+          return t("contacts.errors.emailInvalid");
         }
         return "";
       case "comment":
         if (!value.trim()) {
-          return "Комментарий обязателен";
+          return t("contacts.errors.commentRequired");
         }
         return "";
       default:
@@ -93,12 +96,12 @@ export const ContactsPage = () => {
           "https://web.dsr-metal.com/api/submit-form",
           formData
         );
-        console.log("Форма успешно отправлена", response.data);
+        console.log(t("contacts.successMessage"), response.data);
       } catch (error) {
-        console.error("Ошибка при отправке формы", error);
+        console.error(t("contacts.errorMessage"), error);
       }
     } else {
-      console.log("Форма содержит ошибки");
+      console.log(t("contacts.formErrors"));
     }
   };
 
@@ -106,23 +109,19 @@ export const ContactsPage = () => {
     <>
       <section className="contacts__header">
         <div className="contacts__header-container">
-          <h1 className="page__title-large contacts__title">
-            Контакты DSR Metal
-          </h1>
+          <h1 className="page__title-large contacts__title" dangerouslySetInnerHTML={{ __html: t("contacts.title") }} />
         </div>
       </section>
       <section className="page__section contacts">
         <form className="form" onSubmit={handleSubmit}>
           <div className="form__field-container">
-            <h2 className="form__title">Имя</h2>
+            <h2 className="form__title">{t("contacts.name")}</h2>
             <input
               type="text"
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className={`form__field ${
-                errors.name ? "form__field--error" : ""
-              }`}
+              className={`form__field ${errors.name ? "form__field--error" : ""}`}
             />
             {errors.name && (
               <Text
@@ -137,15 +136,13 @@ export const ContactsPage = () => {
             )}
           </div>
           <div className="form__field-container">
-            <h2 className="form__title">Телефон</h2>
+            <h2 className="form__title">{t("contacts.phone")}</h2>
             <input
               type="text"
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              className={`form__field ${
-                errors.phone ? "form__field--error" : ""
-              }`}
+              className={`form__field ${errors.phone ? "form__field--error" : ""}`}
             />
             {errors.phone && (
               <Text
@@ -160,15 +157,13 @@ export const ContactsPage = () => {
             )}
           </div>
           <div className="form__field-container">
-            <h2 className="form__title">E-Mail</h2>
+            <h2 className="form__title">{t("contacts.email")}</h2>
             <input
               type="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className={`form__field ${
-                errors.email ? "form__field--error" : ""
-              }`}
+              className={`form__field ${errors.email ? "form__field--error" : ""}`}
             />
             {errors.email && (
               <Text
@@ -183,14 +178,12 @@ export const ContactsPage = () => {
             )}
           </div>
           <div className="form__field-container">
-            <h2 className="form__title">Комментарий</h2>
+            <h2 className="form__title">{t("contacts.comment")}</h2>
             <textarea
               name="comment"
               value={formData.comment}
               onChange={handleChange}
-              className={`form__field form__field__textarea ${
-                errors.comment ? "form__field--error" : ""
-              }`}
+              className={`form__field form__field__textarea ${errors.comment ? "form__field--error" : ""}`}
             ></textarea>
             {errors.comment && (
               <Text
@@ -206,16 +199,11 @@ export const ContactsPage = () => {
           </div>
           <div className="form__button-container">
             <button type="submit" className="page__button form__button">
-              Отправить сообщение
+              {t("contacts.submitButton")}
             </button>
           </div>
         </form>
-        <p className="page__paragraph form__paragraph">
-          ЩЩЩ <br /> ДСР <br /> 624760, Россия, Свердловская область, Верхняя
-          Салда, ул. Парковая 1 <br /> Телефон: +7 (34345) 6-23-66, +7 (34345)
-          6-00-01 <br /> Факс: +7 (34345) 5-14-98, +7 (34345) 6-20-68 E-mail:
-          info@vsmpo-avisma.ru, td-info@vsmpo-avisma.ru
-        </p>
+        <p className="page__paragraph form__paragraph" dangerouslySetInnerHTML={{ __html: t("contacts.address") }} />
         <div className="adress-img-container">
           <picture className="adress-img">
             <source
